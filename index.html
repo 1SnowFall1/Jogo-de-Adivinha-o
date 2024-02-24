@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Jogo de Adivinhação</h1>
+    <div id="game" class="fade-in">
+        <p>Escolha um intervalo de números:</p>
+        <input type="number" id="minRange" placeholder="Mínimo">
+        <input type="number" id="maxRange" placeholder="Máximo">
+        <button onclick="startGame()">Iniciar Jogo</button>
+        <button onclick="showHelp()">Ajuda</button>
+        <p id="rangeMessage"></p>
+    </div>
+    <div id="guessing" style="display: none;">
+        <p>Tente adivinhar um número entre <span id="minNumDisplay"></span> e <span id="maxNumDisplay"></span>:</p>
+        <input type="number" id="guessField" class="guess-input">
+        <button onclick="checkGuess()">Verificar</button>
+        <p id="message"></p>
+        <p>Tentativas restantes: <span id="remainingGuesses"></span></p>
+        <p>Tentativas feitas: <span id="attemptCount">0</span></p>
+        <button onclick="restartGame()">Jogar Novamente</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
